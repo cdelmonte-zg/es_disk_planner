@@ -1,0 +1,25 @@
+[package]
+edition = "2024"
+name = "es-disk-planner"
+version = "0.1.0"
+
+authors = ["Christian Del Monte <tu@email>"] 
+categories = ["command-line-utilities", "database"] 
+description = "A CLI and library to estimate Elasticsearch cluster disk capacity." 
+documentation = "https://docs.rs/es-disk-planner" 
+exclude = [".github", "target", "tests"] 
+keywords = ["elasticsearch", "capacity", "planner", "cli"] 
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/cdelmonte-zg/es-disk-planner" 
+
+[dependencies]
+clap = {version = "4.5", features = ["derive"]}
+
+[lib]
+name = "es_disk_planner"
+path = "src/lib.rs"
+
+[[bin]]
+name = "es-disk-planner"
+path = "src/main.rs"
